@@ -1,0 +1,79 @@
+{% from "govuk-jinja-components/button/macro.jinja" import govukButton -%}
+{% set page_title = "COVID-19 risk assessments" %}
+{% set page_url = config['siteUrl'] + "/risk-assessments" %}
+{% set page_description = "COVID-19 risk assessments must be published in the open so workers and the public understand the risks" %}
+{% extends "base.html" %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl compact-heading">COVID-19 risk assessments</h1>
+      
+      <div class="stats-board">
+        <div class="big-number">
+          <span class="big-number__number">{{stats['risk_assessments_public']}}</span>
+          <span class="big-number__quantity govuk-tag public">Public</span>
+        </div>
+        <div class="big-number">
+          <span class="big-number__number">{{stats['risk_assessments_onrequest']}}</span>
+          <span class="big-number__quantity govuk-tag onrequest">On request</span>
+        </div>
+        <div class="big-number">
+          <span class="big-number__number">{{stats['risk_assessments_private']}}</span>
+          <span class="big-number__quantity govuk-tag private">Private</span>
+        </div>
+        <div class="big-number">
+          <span class="big-number__number">{{stats['risk_assessments_unknown']}}</span>
+          <span class="big-number__quantity govuk-tag unknown">Unknown</span>
+        </div>
+      </div>
+
+      <ul id="risk-assessment-list" class="govuk-list">
+        {% for assessment in risk_assessments|sort(attribute='employer') %}
+          <li>
+            <a href="/risk-assessments/{{assessment.get_slug()}}">
+            {{assessment.employer}} &mdash;
+            {{assessment.workplace}}
+          </a>
+          {% if assessment.risk_assessment_status == 'public' %}
+            <span class="govuk-tag public">
+              Public
+            </span>
+            {% elif assessment.risk_assessment_status == 'private'%}
+              <span class="govuk-tag private">
+                Private
+              </span>
+            {% elif assessment.risk_assessment_status == 'on request'%}
+              <span class="govuk-tag onrequest">
+                On request
+              </span>
+            {% else %}
+              <span class="govuk-tag unknown">
+                Unknown
+              </span>
+            {% endif %}
+          </li>
+       {% endfor %}
+      </ul>
+      <h3 class="govuk-heading-m">Download this data</h3>
+      <p class="govuk-body">
+        The data for this risk assessment is available to download and reuse.
+      </p>
+      <p class="govuk-body">
+        <a href="{{config['dataSiteUrl']}}">Download data</a>
+      </p>
+      <div class="feedback-panel">
+        <h3 class="feedback-panel__heading">Help improve this data</h3>
+        <p>
+          If you find errors, email corrections or questions to
+          <a href="mailto:{{config['siteEmail']}}">{{config['siteEmail']}}</a>.
+          If you know of a risk assessment that is missing from the register, <a href="/add-risk-assessment">please add it</a>.
+        </p>
+      </div>
+
+    </div>
+<!--     <div class="govuk-grid-column-two-thirds">
+      <script async src="https://cse.google.com/cse.js?cx=008821357316905627383:t7nki7qewy7"></script>
+      <div class="gcse-searchbox-only"></div>
+    </div> -->
+
+{% endblock %}

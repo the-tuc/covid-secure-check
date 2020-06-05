@@ -1,0 +1,75 @@
+{% from "govuk-jinja-components/button/macro.jinja" import govukButton -%}
+{% from "govuk-jinja-components/phase-banner/macro.jinja" import govukPhaseBanner -%}
+{% extends "base.html" %}
+{% block phasebanner %}
+{% endblock%}
+{% block top %}
+  <div class="intro-panel">
+    <div class="govuk-width-container">
+      {{govukPhaseBanner({
+        "tag": {
+          "text": "alpha"
+        },
+        "html": 'This is a new service from the TUC &mdash; your <a class="govuk-link" href="mailto:' + config['siteEmail'] + '">feedback</a> will help us to improve it.'}) 
+      }}
+      <div class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body-l">
+            {{config['siteName']}} collects the Covid-19 risk assessments published by employers and monitors good and bad practices in different jobs. The evidence we gather will be used to try and improve everyone&rsquo;s working conditions during the pandemic.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}    
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          If you&rsquo;re worried about a safety issue where you work, <a href="/report">read our guide to reporting it</a>.
+        </strong>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-row section">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Risk assessments</h2>
+      <p class="govuk-body">
+        We&rsquo;re building a database to show what employers are doing to meet their safety obligations. 
+      </p>
+      {{govukButton({"text": "Find a risk assessment", "href": "/risk-assessments", "isStartButton": True})|safe}}
+      <p class="govuk-body">
+        Or <a href="/add-risk-assessment">add your company's risk assessment to the register</a>
+      </p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="big-number">
+        <span class="big-number__number">{{stats['risk_assessments_public']}}</span>
+        <span class="big-number__quantity govuk-tag public">Public</span>
+      </div>
+      <div class="big-number">
+        <span class="big-number__number">{{stats['risk_assessments_unknown']}}</span>
+        <span class="big-number__quantity govuk-tag unknown">Unknown</span>
+      </div>
+    </div>
+  </div>
+   <div class="govuk-grid-row section">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Workplace monitors</h2>
+      <p class="govuk-body">
+        We&rsquo;re asking people to take a short survey about how safe their workplace is. This will help us measure how safe different jobs are during the pandemic, as people go back to work.
+      </p>
+      {{govukButton({"text": "Sign up as a workplace monitor", "href": "/monitors", "isStartButton": True})|safe}} 
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="big-number">
+        <span class="big-number__number">{{stats['volunteers']}}</span>
+        <span class="big-number__quantity">Workplace monitors</span>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+config.yaml
+__pycache__/*
+.DS_Store
+._.DS_Store
+node_modules
+npm-debug.log
+Gemfile.lock
+package-lock.json
+env/*

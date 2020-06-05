@@ -1,0 +1,219 @@
+{% set page_title = "Covid 19 risk assessment: " + risk_assessment.employer + " - " + risk_assessment.workplace %}
+{% set page_url = config['siteUrl'] + "/risk-assessments/" + risk_assessment.get_slug() %}
+{% set page_description = "Check this risk assessment for this workplace" %}
+{% extends "base.html" %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Risk assessment</span>
+        {{risk_assessment.employer}} &mdash; {{risk_assessment.workplace}}
+      </h1>
+        {% if risk_assessment.risk_assessment_status == 'public' and risk_assessment.risk_assessment_url != None %}
+          <p class="govuk-body-l">
+            A risk assessment has been completed and published in <span class="govuk-tag public">public</span>{% if risk_assessment.risk_assessment_date != None %} on the {{risk_assessment.risk_assessment_date.strftime('%d %B %Y')}}{% endif %}
+          </p>
+          <section class="attachment hosted-externally">
+            <div class="attachment-thumb">
+              <a aria-hidden="true" class="thumbnail" tabindex="-1" href="{{risk_assessment.risk_assessment_url}}">
+                <img alt="" src="/assets/publication-generic.png">
+              </a>
+            </div>
+            <div class="attachment-details">
+              <h2 class="title govuk-heading-m">
+                <a rel="external" href="{{risk_assessment.risk_assessment_url}}">
+                  {% if risk_assessment.risk_assessment_title != None %}
+                    {{risk_assessment.risk_assessment_title}}
+                  {% else %}
+                    {{risk_assessment.risk_assessment_url|truncate(20)}}
+                  {% endif %}
+                </a>
+              </h2>
+              <p class="metadata">
+                  <span class="url">{{risk_assessment.get_risk_assessment_domain()}}</span>
+              </p>
+            </div>
+          </section>
+        {% elif risk_assessment.risk_assessment_status == 'private' %}
+          <p class="govuk-body-l">
+            A risk assessment appears to have been completed but is <span class="govuk-tag private">private</span>
+          </p>
+        {% elif risk_assessment.risk_assessment_status == 'on request' %}
+          <p class="govuk-body-l">
+            A risk assessment appears to have been completed and is available <span class="govuk-tag onrequest">on request</span>
+          </p>
+        {% else %}
+          <p class="govuk-body-l">
+            This workplace has been checked, but the status of the risk assessment is <span class="govuk-tag unknown">unknown</span>. If you have information that the employer has created a risk assessment, please <a href="/add-risk-assessment">submit it here</a>.
+          </p>
+        {% endif %}
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employer
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{risk_assessment.employer}}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employer address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.employer_address %}
+              <address>
+                <a href="https://www.openstreetmap.org/search?query={{risk_assessment.employer_addressi|urlencode}}">{{risk_assessment.employer_address}}</a>
+              </address>
+            {% else %}
+              <p>
+                The address of this employer is unknown
+              </p>
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employer website
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.employer_website_url %}
+              <a href="{{risk_assessment.employer_website_url}}">{{risk_assessment.employer_website_url}}</a>
+            {% else %}
+              Unknown
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Company number
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {% if risk_assessment.company_number %}
+            <a href="https://beta.companieshouse.gov.uk/company/{{risk_assessment.company_number}}">{{risk_assessment.company_number}}</a>
+          {% else %}
+            Unknown or not relevant
+          {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Workplace
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{risk_assessment.workplace}}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Workplace address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.workplace_address %}
+              <address>
+                <a href="https://www.openstreetmap.org/search?query={{risk_assessment.workpalce_addressi|urlencode}}">{{risk_assessment.workplace_address}}</a>
+              </address>
+            {% else %}
+              <p>
+                The address of this workplace is unknown
+              </p>
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Workplace website
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.workplace_website_url %}
+              <a href="{{risk_assessment.workplace_website_url}}">{{risk_assessment.workplace_website_url}}</a>
+            {% else %}
+              Unknown
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Approximate number of workers at this workplace
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.workplace_approximate_number_of_workers %}
+              {{risk_assessment.workplace_approximate_number_of_workers}}
+            {% else %}
+              Unknown
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Public access
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.public_visit == True %}
+              Members of the public visit this workplace
+            {% elif risk_assessment.public_visit == False %}
+              There is no public access to this workplace
+            {% else %}
+              Unknown
+            {% endif %}
+          </dd>
+        </div>
+<!--         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Union presence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.union_presence == True %}
+              A union is active in this workplace in some form
+            {% elif risk_assessment.public_visit == False %}
+              There is no known union presence in this workplace
+            {% else %}
+              Unknown
+            {% endif %}
+          </dd>
+        </div> -->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Standard Industrial Classification (SIC) codes
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.sic_codes %}
+              {% for item in risk_assessment.sic_codes %}
+                {{item}}&nbsp;
+              {% endfor %}
+            {% else %}
+              Unknown
+            {% endif %}
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional information
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if risk_assessment.additional_information_url %}
+              <a href="{{risk_assessment.additional_information_url}}">{{risk_assessment.additional_information_url}}</a>
+            {% else %}
+              None
+            {% endif %}
+          </dd>
+        </div>
+      </dl>
+      <h3 class="govuk-heading-m">Download this data</h3>
+      <p class="govuk-body">
+        The data for this risk assessment is available to download and reuse.
+      </p>
+      <p class="govuk-body">
+        <a href="{{config['dataSiteUrl']}}">Download data</a>
+      </p>
+      <div class="feedback-panel">
+        <h3 class="feedback-panel__heading">Help improve this data</h3>
+        <p>
+          If you find errors, email corrections or questions to
+          <a href="mailto:{{config['siteEmail']}}">{{config['siteEmail']}}</a>.
+          If you know of a risk assessment that is missing from the register, <a href="/add-risk-assessment">please add it</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

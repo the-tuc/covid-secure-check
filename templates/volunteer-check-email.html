@@ -1,0 +1,19 @@
+{% set page_title = "Confirm your email" %}
+{% set page_url = config['siteUrl'] + "/volunteer" %}
+{% set page_description = "Become a COVID Secure checker" %}
+{% from "govuk-jinja-components/button/macro.jinja" import govukButton -%}
+{% from "govuk-jinja-components/panel/macro.jinja" import govukPanel %}
+{% extends "base.html" %}
+{% block title %}Become a Covid-Secure monitor{% endblock %}
+{% block content %}
+  <div class="grid-container">
+    <section role="main" class="grid-x grid-padding-x">
+      <div class="medium-8 cell">
+       {{ govukPanel({
+         "titleText": "Check your inbox",
+          "html": "To complete the subscription process, click the link in the email we just sent you."
+        }) }}
+      </div>
+    </section>
+  </div>
+{% endblock %}
