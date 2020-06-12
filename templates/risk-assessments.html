@@ -26,7 +26,6 @@
           <span class="big-number__quantity govuk-tag unknown">Unknown</span>
         </div>
       </div>
-
       <ul id="risk-assessment-list" class="govuk-list">
         {% for assessment in risk_assessments|sort(attribute='employer') %}
           <li>
@@ -54,6 +53,21 @@
           </li>
        {% endfor %}
       </ul>
+
+      <div>
+        <form action="https://cse.google.com/cse" method="GET">
+          <input type="hidden" name="cx" value="{{config['googleCustomSearchId']}}">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+              Search
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="q" name="q" type="text">
+            {{govukButton({"text": "Search"})}} 
+          </div>
+          
+        </form>
+      </div>
+
       <h3 class="govuk-heading-m">Download this data</h3>
       <p class="govuk-body">
         The data for this risk assessment is available to download and reuse.
@@ -69,11 +83,5 @@
           If you know of a risk assessment that is missing from the register, <a href="/add-risk-assessment">please add it</a>.
         </p>
       </div>
-
     </div>
-<!--     <div class="govuk-grid-column-two-thirds">
-      <script async src="https://cse.google.com/cse.js?cx=008821357316905627383:t7nki7qewy7"></script>
-      <div class="gcse-searchbox-only"></div>
-    </div> -->
-
 {% endblock %}
