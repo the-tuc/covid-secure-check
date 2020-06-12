@@ -1,0 +1,26 @@
+{
+  "name": "covid-secure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "govuk-frontend": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-tuc/covid-secure-check.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-tuc/covid-secure-check/issues"
+  },
+  "homepage": "https://github.com/the-tuc/covid-secure-check#readme"
+}
