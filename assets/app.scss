@@ -65,7 +65,15 @@ $unknown-colour:rgb(220,0,78);
 
 .govuk-phase-banner__content__tag {
   background-color: $primary-colour;
+  position:relative;
+  top:7px;
 }
+@media (min-width: 48.0625em){
+  .govuk-phase-banner__content__tag {
+    top:0;
+  }
+}
+
 
 //Footer
 .govuk-footer__copyright-logo {
@@ -221,7 +229,7 @@ $unknown-colour:rgb(220,0,78);
     padding-bottom:govuk-spacing(1);
     a {
       display: inline-block;
-      width:70%; 
+      width:65%; 
     }
     .govuk-tag{
       float:right;
