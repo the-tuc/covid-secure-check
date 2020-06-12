@@ -48,8 +48,11 @@ with open('%s/risk-assessments.csv' % config['dataDir']) as csv_file:
         print("Invalid risk assessment  %s" % ", ".join(risk_assessment._validation_errors))
 
 # mailchimp
-mailchimp_client = MailChimp(mc_api=config['mailchimpApiKey'], mc_user=config['mailchimpUsername'])
-mailchimp_list = mailchimp_client.lists.get(config['mailchimpAudienceId'])
+mailchimp_api_key = os.environ['MAILCHIMP_API_KEY']
+mailchimp_username = os.environ['MAILCHIMP_USERNAME']
+mailchimp_audience_id = os.environ['MAILCHIMP_AUDIENCE_ID']
+mailchimp_client = MailChimp(mc_api=mailchimp_api_key, mc_user=mailchimp_username)
+mailchimp_list = mailchimp_client.lists.get(mailchimp_audience_id)
 
 # Stats
 stats = {'risk_assessments': 0, 'volunteers': 0, 'risk_assessments_public': 0, 'risk_assessments_private': 0, 'risk_assessments_onrequest': 0, 'risk_assessments_unknown': 0}

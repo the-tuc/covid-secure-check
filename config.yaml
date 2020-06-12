@@ -1,0 +1,48 @@
+siteUrl: https://covidsecurecheck.uk
+dataSiteUrl: https://data.covidsecurecheck.uk
+siteTwitter: the_TUC
+siteName: COVID Secure Check
+siteEmail: info@covidsecurecheck.uk 
+socialShareImage: '/assets/social-share.png'
+templatesDir: templates
+outputDir: docs
+dataDir: data
+assetsDir: assets
+menuItems:
+  -
+    path: '/risk-assessments'
+    title: Find a risk assessment
+  -
+    path: '/monitors'
+    title: Sign up as a workplace monitor
+  -
+    path: '/about'
+    title: About
+
+footerItems:
+  -
+    path: '/risk-assessments'
+    title: Find a risk assessment
+  -
+    path: '/monitors'
+    title: Sign up as a workplace monitor
+  -
+    path: '/about'
+    title: About
+  -
+    path: 'https://data.covidsecurecheck.uk'
+    title: Open data
+  -
+    path: 'https://www.tuc.org.uk/join-union'
+    title: Join a union
+  -
+    path: '/privacy'
+    title: Privacy policy
+  -
+    path: '/cookies'
+    title: How we use cookies
+
+riskAssessmentCsvUrl: "http://data.covidsecurecheck.uk/data/risk-assessments.csv"
+riskAssessmentFormUrl: "https://docs.google.com/forms/d/1pzNCTSLXQUAk2aaexU8gctgE2eGu4v2D1FVCNIvx_E4/viewform?ts=5ed7536e"
+mailchimpSignupUrl: "https://tuc.us18.list-manage.com/subscribe/post?u=93edca5f93c8ed1746250a63d&amp;id=cb205aeac2"
+googleCustomSearchId: "005894928308782525558:yebsygi2bo8"
