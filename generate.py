@@ -59,6 +59,11 @@ stats = {'risk_assessments': 0, 'volunteers': 0, 'risk_assessments_public': 0, '
 stats['risk_assessments'] = len(risk_assessments)
 stats['volunteers'] = mailchimp_list['stats']['member_count']
 
+# output directory
+create_directory(config['outputDir'])
+
+create_directory("%s/assets" % config['outputDir'])
+
 # Risk assessments
 create_directory("%s/risk-assessments" % config['outputDir'])
 for risk_assessment in risk_assessments:
@@ -103,6 +108,10 @@ for path in glob.glob('%s/static/*.md' % config['dataDir']):
   render("%s/%s" % (config['outputDir'], file_name), "static.html", page=page)
 
 #assets
+path = "assets/CNAME"
+file_name = os.path.basename(path)
+copyfile(path, "%s/CNAME" % config['outputDir'])
+
 for path in glob.glob('%s/*.js' % config['assetsDir']):
   file_name = os.path.basename(path)
   copyfile(path, "%s/assets/%s" % (config['outputDir'], file_name))
