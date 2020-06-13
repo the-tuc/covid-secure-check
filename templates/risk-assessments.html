@@ -53,7 +53,9 @@
           </li>
        {% endfor %}
       </ul>
-
+      <p>
+        Last update: {{config['registerUpdated'].strftime('%d %B %Y')}}
+      </p>
       <div>
         <form action="https://cse.google.com/cse" method="GET">
           <input type="hidden" name="cx" value="{{config['googleCustomSearchId']}}">
