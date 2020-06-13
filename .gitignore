@@ -6,3 +6,4 @@ npm-debug.log
 Gemfile.lock
 package-lock.json
 env/*
+docs/
