@@ -1,5 +1,5 @@
 ---
-title: 'Privacy policy'
+title: 'Cookies'
 ---
 
 ## What Are Cookies?
