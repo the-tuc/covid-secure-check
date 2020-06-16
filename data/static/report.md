@@ -1,5 +1,5 @@
 ---
-title: 'What to do if you feeling unsafe at work'
+title: 'What to do if you are feeling unsafe at work'
 ---
 All workers have a right to be safe at work, wherever they work and whatever they do. Coronavirus does not change this. 
 
