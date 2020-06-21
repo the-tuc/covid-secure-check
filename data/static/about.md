@@ -1,7 +1,7 @@
 ---
 title: 'About'
 ---
-Many people are returning to work as the UK’s Covid-19 lockdown eases. As they do, employers must make sure their workplaces are safe.
+Many people are returning to work as the UK’s COVID-19 lockdown eases. As they do, employers must make sure their workplaces are safe.
  
 UK law says every employer with more than five staff must produce a risk assessment. And [new government guidance says]((https://www.gov.uk/guidance/working-safely-during-coronavirus-covid-19)) that these risk assessments should be published on employers’ own websites:
 If possible, you should consider publishing the results on your website (and we would expect all businesses with over 50 workers to do so).

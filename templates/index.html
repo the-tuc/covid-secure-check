@@ -1,8 +1,9 @@
 {% from "govuk-jinja-components/button/macro.jinja" import govukButton -%}
 {% from "govuk-jinja-components/phase-banner/macro.jinja" import govukPhaseBanner -%}
 {% extends "base.html" %}
+{% block bodyclass %}landing-page{% endblock %}
 {% block phasebanner %}
-{% endblock%}
+{% endblock %}
 {% block top %}
   <div class="intro-panel">
     <div class="govuk-width-container">
@@ -42,7 +43,7 @@
       <p class="govuk-body">
         We&rsquo;re building a database to show what employers are doing to meet their safety obligations. 
       </p>
-      {{govukButton({"text": "Find a risk assessment", "href": "/risk-assessments", "isStartButton": True})|safe}}
+      {{govukButton({"text": "Find a risk assessment", "href": "/risk-assessments", "isStartButton": False})|safe}}
       <p class="govuk-body">
         Or <a href="/add-risk-assessment">add your company's risk assessment to the register</a>
       </p>
@@ -64,7 +65,7 @@
       <p class="govuk-body">
         We&rsquo;re asking people to take a short survey about how safe their workplace is. This will help us measure how safe different jobs are during the pandemic, as people go back to work.
       </p>
-      {{govukButton({"text": "Sign up as a workplace monitor", "href": "/monitors", "isStartButton": True})|safe}} 
+      {{govukButton({"text": "Sign up as a workplace monitor", "href": "/monitors", "isStartButton": False})|safe}} 
     </div>
     <div class="govuk-grid-column-one-third">
       <div class="big-number">
