@@ -3,7 +3,7 @@ dataSiteUrl: https://data.covidsecurecheck.uk
 siteTwitter: the_TUC
 siteName: COVID Secure Check
 siteEmail: info@covidsecurecheck.uk
-registerUpdated: 2020-07-09
+registerUpdated: 2020-07-16
 socialShareImage: '/assets/social-share.png'
 templatesDir: templates
 outputDir: docs
