@@ -108,6 +108,7 @@ for path in glob.glob('%s/static/*.md' % config['dataDir']):
   render("%s/%s" % (config['outputDir'], file_name), "static.html", page=page)
 
 # reports and guides
+create_directory("%s/reports" % config['outputDir'])
 for path in glob.glob('%s/reports/*.md' % config['dataDir']):
   page = frontmatter.load(path)
   #replaces any config variables in markdown
