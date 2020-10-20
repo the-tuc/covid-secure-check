@@ -67,9 +67,9 @@ Additionally the best Covid risk assessments should take account of any specific
 
 The employer risk assessments we’ve looked at range substantially in quality, and below are examples from both ends of the spectrum.
 
-###[W H Smith](https://www.whsmithplc.co.uk/sites/whsmith-corp/files/Press%20Releases%20and%20Reports/Store_RA_Coronavirus_10.%204%20July2020.pdf): the Good
+###W H Smith: the Good
 
-W H Smith is a major retailer which has published a detailed global risk assessment on its website. This, the company says, is accompanied by documents covering risk at local store level.
+W H Smith is a major retailer which has [published a detailed global risk assessment on its website](https://www.whsmithplc.co.uk/sites/whsmith-corp/files/Press%20Releases%20and%20Reports/Store_RA_Coronavirus_10.%204%20July2020.pdf). This, the company says, is accompanied by documents covering risk at local store level.
 
 ####What it does
 
@@ -110,9 +110,9 @@ Despite its detailed provisions, W H Smith could improve the document by includi
 
 * the procedure if a staff member is taken ill.
 
-###[Frasers Group (owner of Sports Direct):](https://www.sportsdirectplc.com/~/media/Files/S/Sports-Direct/documents/frasers-group-risk-assessment.pdf) the Not so Good
+###Frasers Group (owner of Sports Direct): the Not so Good
 
-Frasers Group, owner of Sports Direct, Debenhams and other outlets has published a glossy brochure covering its Covid 19 control measures, although this is in list form rather than the traditional grid format of a risk assessment. It says the document has been prepared with the help of an independent Health & Safety consultant and covers ‘social distancing measures’ and ‘additional measures’
+Frasers Group, owner of Sports Direct, Debenhams and other outlets has [published a glossy brochure covering its Covid 19 control measures](https://www.sportsdirectplc.com/~/media/Files/S/Sports-Direct/documents/frasers-group-risk-assessment.pdf), although this is in list form rather than the traditional grid format of a risk assessment. It says the document has been prepared with the help of an independent Health & Safety consultant and covers ‘social distancing measures’ and ‘additional measures’
 
 **What it does**
 
