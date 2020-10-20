@@ -1,4 +1,7 @@
-#What to look out for in a retail sector COVID-19 risk assessment
+---
+title: 'What to look out for in a retail sector COVID-19 risk assessment'
+date_published: October 2020
+---
 
 Retailers have been open again since June 15 and all retail employers with more than 5 employees should have carried out a full Covid 19 Risk Assessment. In addition the government expect all businesses with more than 50 staff to publish the results of these on their website. However, to date, very few are actually publicly available. We have been collecting those that are [ here.](https://covidsecurecheck.uk/) In this blog post, we cover what to look for in a detailed and decent risk assessment in the retail sector, which includes distribution centres and shops.
 

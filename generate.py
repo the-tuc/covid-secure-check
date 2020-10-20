@@ -111,11 +111,13 @@ for path in glob.glob('%s/static/*.md' % config['dataDir']):
 create_directory("%s/reports" % config['outputDir'])
 for path in glob.glob('%s/reports/*.md' % config['dataDir']):
   page = frontmatter.load(path)
-  #replaces any config variables in markdown
   parsed_content = Template(page.content)
   page.content = parsed_content.render(config=get_config())
   file_name = os.path.basename(path).replace('.md', '.html')
-  render("%s/reports/%s" % (config['outputDir'], file_name), "static.html", page=page)
+  template_name = "analysis.html"
+  if file_name == "index.html"
+    template_name = "static.html"
+  render("%s/reports/%s" % (config['outputDir'], file_name), template_name, page=page)
 
 
 #assets
