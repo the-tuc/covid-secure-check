@@ -107,6 +107,16 @@ for path in glob.glob('%s/static/*.md' % config['dataDir']):
   file_name = os.path.basename(path).replace('.md', '.html')
   render("%s/%s" % (config['outputDir'], file_name), "static.html", page=page)
 
+# reports and guides
+for path in glob.glob('%s/reports/*.md' % config['dataDir']):
+  page = frontmatter.load(path)
+  #replaces any config variables in markdown
+  parsed_content = Template(page.content)
+  page.content = parsed_content.render(config=get_config())
+  file_name = os.path.basename(path).replace('.md', '.html')
+  render("%s/%s" % (config['outputDir'], file_name), "static.html", page=page)
+
+
 #assets
 path = "assets/CNAME"
 file_name = os.path.basename(path)

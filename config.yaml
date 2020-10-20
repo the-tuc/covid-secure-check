@@ -17,6 +17,9 @@ menuItems:
     path: '/monitors'
     title: Sign up as a workplace monitor
   -
+    path: '/reports'
+    title: Reports and analysis
+  -
     path: '/about'
     title: About
 
