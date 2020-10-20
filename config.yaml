@@ -12,13 +12,13 @@ assetsDir: assets
 menuItems:
   -
     path: '/risk-assessments'
-    title: Find a risk assessment
+    title: Risk assessments
   -
     path: '/monitors'
     title: Sign up as a workplace monitor
   -
     path: '/reports'
-    title: Reports and analysis
+    title: Reports &amp; analysis
   -
     path: '/about'
     title: About
