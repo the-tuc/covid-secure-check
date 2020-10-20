@@ -114,7 +114,7 @@ for path in glob.glob('%s/reports/*.md' % config['dataDir']):
   parsed_content = Template(page.content)
   page.content = parsed_content.render(config=get_config())
   file_name = os.path.basename(path).replace('.md', '.html')
-  render("%s/%s" % (config['outputDir'], file_name), "static.html", page=page)
+  render("%s/reports/%s" % (config['outputDir'], file_name), "static.html", page=page)
 
 
 #assets
