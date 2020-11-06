@@ -133,7 +133,7 @@ Frasers Group, owner of Sports Direct, Debenhams and other outlets has [publishe
 
 ####What it does not do
 
-The list format used by Frasers Group means that as a risk assessment document it falls short in a number of areas. For example, it does not
+The list format used by Frasers Group means that as a risk assessment document it falls short in a number of areas. For example, it does not:
 
 
 * state which groups of people are ‘at risk’, and beyond a mention of shielding does not address the specific concerns of vulnerable groups.
