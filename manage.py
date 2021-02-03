@@ -131,8 +131,12 @@ class Manage(object):
         for path in glob.glob('%s/*.js' % config['assetsDir']):
           file_name = os.path.basename(path)
           copyfile(path, "%s/assets/%s" % (config['outputDir'], file_name))
-          
+
         for path in glob.glob('%s/*.png' % config['assetsDir']):
+          file_name = os.path.basename(path)
+          copyfile(path, "%s/assets/%s" % (config['outputDir'], file_name))
+
+        for path in glob.glob('%s/*.jpg' % config['assetsDir']):
           file_name = os.path.basename(path)
           copyfile(path, "%s/assets/%s" % (config['outputDir'], file_name))
 
