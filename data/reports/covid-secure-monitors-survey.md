@@ -2,7 +2,7 @@
 title: "Our latest Covid Secure Monitors survey: \"Mostly it is as if there isn't a pandemic at all.\""
 date_published: February 2021
 ---
-![Photo of a security guard at entrance to a shop, taken from the inside looking out][/assets/shop-guard.jpg]
+![Photo of a security guard at entrance to a shop, taken from the inside looking out](/assets/shop-guard.jpg)
 
 Before Christmas, we surveyed our "Covid Secure Monitors" panel comprised of 220 workers from across the UK. We received 60 new responses over the last month, many of which paint a worrying picture of companies and managers failing to keep workers safe and putting profit above their well-being.
 
