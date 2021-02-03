@@ -11,7 +11,7 @@ $unknown-colour:rgb(220,0,78);
 .govuk-hint, .govuk-label, .govuk-body-l, .govuk-body-lead,
   .big-number, .govuk-warning-text__text, .govuk-button, .govuk-heading-m,
   .govuk-body-m, .govuk-body, .govuk-list, .govuk-back-link, .govuk-link, .govuk-error-message,
-  .govuk-body-l, 
+  .govuk-body-l,
   .govuk-fieldset__legend, .govuk-details, .govuk-summary-list, .govuk-panel,
   .govuk-button, .govuk-button--start, .govuk-tag, .govuk-phase-banner
 {
@@ -23,7 +23,7 @@ $unknown-colour:rgb(220,0,78);
   margin-bottom:govuk-spacing(3);
 }
 
-.govuk-fieldset__legend--xl, .govuk-heading-l, .govuk-heading-m, 
+.govuk-fieldset__legend--xl, .govuk-heading-l, .govuk-heading-m,
   .govuk-heading-xl, .govuk-heading-m, .govuk-header__link--service-name
   {
   font-family:"Arvo", sans-serif;
@@ -246,7 +246,7 @@ $unknown-colour:rgb(220,0,78);
     padding-bottom:govuk-spacing(1);
     a {
       display: inline-block;
-      width:65%; 
+      width:65%;
     }
     .govuk-tag{
       float:right;
@@ -274,4 +274,8 @@ $unknown-colour:rgb(220,0,78);
 .section {
   border-bottom:solid 1px $border-colour;
   padding-top:govuk-spacing(3);
+}
+
+.govuk-body img {
+  width:100%;
 }
