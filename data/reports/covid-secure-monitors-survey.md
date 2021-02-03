@@ -81,4 +81,6 @@ Importantly, a respondent working in a factory reminds us that there’s much mo
 
 “[I] would feel safer if the company took social distancing seriously and obeyed the law… to ensure the health and safety of their employees.”
 
-[Sign up to be a Covid Secure Monitor]((https://covidsecurecheck.uk/monitors/))
+<a href="/monitors" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Sign up to be a Covid Secure Monitor
+</a>
