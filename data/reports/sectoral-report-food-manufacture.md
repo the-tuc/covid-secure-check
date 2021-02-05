@@ -103,32 +103,44 @@ However, this is still highly unusual, despite the many outbreaks in the
 food industry. Of six other major UK food companies where there have
 been Covid outbreaks only one has made a Risk Assessment public.
 
-+----------------------+----------------------+----------------------+
-| Other major food     | What does it do?     | Published Covid      |
-| companies forced to  |                      | Secure Risk          |
-| close due to         |                      | Assessment           |
-| outbreaks            |                      |                      |
-|                      |                      | Y or N?              |
-+======================+======================+======================+
-| 2Sisters Food Group  | Poultry              | No mention on        |
-|                      |                      | website              |
-+----------------------+----------------------+----------------------+
-| Bakkavor Group Plc   | Fresh prepared       | Says RA carried out  |
-|                      |                      | at 25 factories but  |
-|                      |                      | these are private    |
-+----------------------+----------------------+----------------------+
-| Moy Park             | Poultry              | No mention on        |
-|                      |                      | website              |
-+----------------------+----------------------+----------------------+
-| Cranswick Country    | Meat, poultry,       | Yes                  |
-| Foods                | convenience          |                      |
-+----------------------+----------------------+----------------------+
-| Kober (owned by      | Meat                 | Owned by Asda which  |
-| Asda)                |                      | has no RA            |
-+----------------------+----------------------+----------------------+
-| Rowan Foods (Oscar   | Prepared             | Private              |
-| Mayer)               |                      |                      |
-+----------------------+----------------------+----------------------+
+<table>
+  <tr>
+    <th>Other major food companies forced to close due to outbreaks</th>
+    <th>What does it do?</th>
+    <th>Published Covid Secure Risk Assessment
+Y or N?</th>
+  </tr>
+  <tr>
+    <td>2Sisters Food Group</td>
+    <td>Poultry</td>
+    <td>No mention on website</td>
+  </tr>
+  <tr>
+    <td>Bakkavor Group Plc</td>
+    <td>Fresh prepared</td>
+    <td>Says RA carried out at 25 factories but these are private</td>
+  </tr>
+  <tr>
+    <td>Moy Park</td>
+    <td>Poultry</td>
+    <td>No mention on website</td>
+  </tr>
+  <tr>
+    <td>Cranswick Country Foods</td>
+    <td>Meat, poultry, convenience</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Kober (owned by Asda)</td>
+    <td>Meat</td>
+    <td>Owned by Asda which has no RA</td>
+  </tr>
+  <tr>
+    <td>Rowan Foods (Oscar Mayer)</td>
+    <td>Prepared</td>
+    <td>Private</td>
+  </tr>
+</table>
 
 ## The importance of unions
 
