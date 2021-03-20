@@ -4,7 +4,7 @@ decorator==4.4.2
 fire==0.3.1
 -e git+https://github.com/richardjpope/govuk-jinja-components@929a494a555d4f6abc20d3c22d2edeb62b7ae020#egg=govuk_jinja_components
 idna==2.9
-Jinja2==2.11.2
+Jinja2==2.11.3
 jinja2-markdown==0.0.3
 libsass==0.20.0
 mailchimp3==3.0.14
