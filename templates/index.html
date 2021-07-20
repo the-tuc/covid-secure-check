@@ -8,10 +8,10 @@
   <div class="intro-panel">
     <div class="govuk-width-container">
       {{govukPhaseBanner({
-        "tag": {
-          "text": "alpha"
-        },
-        "html": 'This is a new service from the TUC &mdash; your <a class="govuk-link" href="mailto:' + config['siteEmail'] + '">feedback</a> will help us to improve it.'}) 
+          "tag": {
+            "text": "archived"
+          },
+          "html": 'This is website is no longer being updated &mdash; <a class="govuk-link" href="/reports/is-this-the-end-covid-secure-workplaces"> read about the future of Covid Secure workplaces</a>.'})
       }}
       <div class="govuk-main-wrapper">
         <div class="govuk-grid-row">
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-{% endblock %}    
+{% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -41,7 +41,7 @@
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Risk assessments</h2>
       <p class="govuk-body">
-        We&rsquo;re building a database to show what employers are doing to meet their safety obligations. 
+        We&rsquo;re building a database to show what employers are doing to meet their safety obligations.
       </p>
       {{govukButton({"text": "Find a risk assessment", "href": "/risk-assessments", "isStartButton": False})|safe}}
       <p class="govuk-body">
@@ -65,7 +65,7 @@
       <p class="govuk-body">
         We&rsquo;re asking people to take a short survey about how safe their workplace is. This will help us measure how safe different jobs are during the pandemic, as people go back to work.
       </p>
-      {{govukButton({"text": "Sign up as a workplace monitor", "href": "/monitors", "isStartButton": False})|safe}} 
+      {{govukButton({"text": "Sign up as a workplace monitor", "href": "/monitors", "isStartButton": False})|safe}}
     </div>
     <div class="govuk-grid-column-one-third">
       <div class="big-number">
